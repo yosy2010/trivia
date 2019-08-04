@@ -17,10 +17,21 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--here we add this fragment to the main activity and fill the page with it-->
+        <fragment
+            android:id="@+id/nav_host_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-        </LinearLayout>
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:navGraph="@navigation/navigation"
+            app:defaultNavHost="true"
+            />
+
+    </LinearLayout>
 
 </layout>
